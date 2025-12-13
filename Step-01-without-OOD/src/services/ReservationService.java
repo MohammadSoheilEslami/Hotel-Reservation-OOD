@@ -30,6 +30,11 @@ public class ReservationService {
                 paymentProcessor.payByCash(res.totalPrice());
                 break;
             // هنوز پرداخت حضوری را اضافه نکردیم (چون وظیفه هم‌گروهی است)
+
+            //پرداخت حضوری
+            case ON_SITE:
+                paymentProcessor.payOnSite(res.totalPrice());
+                break;
         }
 
         System.out.println("----- INVOICE -----");
